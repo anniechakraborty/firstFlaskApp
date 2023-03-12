@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 # __name__ is the placeholder for the current module (App.py)
 
 @app.route('/')
 def index():
-    return 'Hello   World'
+    return render_template('home.html')
 
 if __name__ == '__main__':
     # script which will be executed
