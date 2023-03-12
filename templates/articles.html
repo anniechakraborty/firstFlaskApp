@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <h1 class="mt-3">Articles</h1>
+    <!-- the articles below is the data we are passing in the route fucntion call -->
+    <ul class="list-group">
+        {% for article in articles %}
+            <li class="list-group-item"><a href="articleDetails/{{ article.id}}">{{ article.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
